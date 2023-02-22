@@ -20,9 +20,9 @@ const Form = () => {
     }, [country, street, subject])
 
     useEffect( () => {
-        tg.onEvent('MainButtonClicked', onSendData)
+        tg.onEvent('mainButtonClicked', onSendData)
         return () => {
-            tg.offEvent('MainButtonClicked', onSendData)
+            tg.offEvent('mainButtonClicked', onSendData)
         }
     }, [onSendData])
 
