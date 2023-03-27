@@ -25,13 +25,13 @@ const ProductList = () => {
     const [addedItems, setAddedItems] = useState([]);
     const {tg, queryId} = useTelegram();
     
-    const onSendData = use(() => {
+    /* const onSendData = use(() => {
         const data = {
             products: addedItems,
             totalPrice: getTotalPrice(addedItems), 
             queryId
         } 
-    fetch('', {
+    fetch('http://85.119.146.179:8000/web-data', {
         method: 'POST',
         headers: {
             'Content-type': 'application/json',
@@ -46,7 +46,7 @@ const ProductList = () => {
             tg.offevent('mainButtonClicked', onSendData)
         }
     }, [onSendData])
-    
+ */
     const onAdd = (product) => {
         const alreadyAdded = addedItems.find(item => item.id === product.id);
         let newItems = [];
