@@ -5,14 +5,14 @@ import {useTelegram} from "../../hooks/useTelegram";
 import {useCallback, useEffect} from "react";
 
 const products = [
-    {id: '1', title: "Tulip", price: 70, description: 'Holland, red'},
-    {id: '2', title: "Tulip", price: 70, description: 'Holland, purple'},
-    {id: '3', title: "Tulip", price: 70, description: 'Holland, yellow'},
-    {id: '4', title: "Tulip", price: 70, description: 'Holland, pink'},
-    {id: '5', title: "Tulip", price: 70, description: 'Holland, light-pink'},
-    {id: '6', title: "Tulip", price: 70, description: 'Holland, dark-pink'},
-    {id: '7', title: "Tulip", price: 70, description: 'Holland, white'},
-    {id: '8', title: "Tulip", price: 70, description: 'Holland, cream'},
+    {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цвета, прямые'},
+    {id: '2', title: 'Куртка', price: 12000, description: 'Зеленого цвета, теплая'},
+    {id: '3', title: 'Джинсы 2', price: 5000, description: 'Синего цвета, прямые'},
+    {id: '4', title: 'Куртка 8', price: 122, description: 'Зеленого цвета, теплая'},
+    {id: '5', title: 'Джинсы 3', price: 5000, description: 'Синего цвета, прямые'},
+    {id: '6', title: 'Куртка 7', price: 600, description: 'Зеленого цвета, теплая'},
+    {id: '7', title: 'Джинсы 4', price: 5500, description: 'Синего цвета, прямые'},
+    {id: '8', title: 'Куртка 5', price: 12000, description: 'Зеленого цвета, теплая'},
 ]
 
 const getTotalPrice = (items = []) => {
@@ -31,7 +31,7 @@ const ProductList = () => {
             totalPrice: getTotalPrice(addedItems),
             queryId,
         }
-        fetch('http://localhost:8000', {
+        fetch('http://85.119.146.179:8000/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
